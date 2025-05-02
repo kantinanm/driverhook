@@ -1,0 +1,34 @@
+{
+  "name": "driverhook",
+  "version": "1.0.0",
+  "description": "create request using node-fetch to keep information, to compose message and send to driver via line notification.",
+  "main": "app.js",
+  "scripts": {
+        "dev": "nodemon app.js",
+        "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kantinanm/driverhook.git"
+  },
+  "keywords": [
+    "node20",
+    "engine"
+  ],
+  "author": "Kantinan Makmee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kantinanm/driverhook/issues"
+  },
+  "homepage": "https://github.com/kantinanm/driverhook#readme",
+  "dependencies": {
+
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.43",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^3.1.10"
+  }
+}
