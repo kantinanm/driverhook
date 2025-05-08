@@ -47,7 +47,21 @@ async function webHookDriverTask(username, check_date) {
       end_time: item.end_time,
       driver_nunet: item.driver_nunet,
       driver_name: item.driver_name,
-      appointment: `${item.start_time} - ${item.end_time}`,
+      appointment:
+        item.days === 0
+          ? `${item.start_time} - ${item.end_time}`
+          : `${moment(item.datestart).format("D")} ${getCurrentMonth(
+              moment(item.datestart).format("MM")
+            )} ${
+              parseInt(moment(item.datestart).format("YYYY")) + 543 - 2500
+            } ${moment(item.datestart).format("HH:mm")} น. ถึง ${moment(
+              item.dateend
+            ).format("D")} ${getCurrentMonth(
+              moment(item.dateend).format("MM")
+            )} ${
+              parseInt(moment(item.dateend).format("YYYY")) - 2500 + 543
+            } ${moment(item.dateend).format("HH:mm")} น.`,
+      //appointment: `${item.start_time} - ${item.end_time}`,
       appointment_type: item.days === 0 ? "onedays" : "period",
       token: item.user_token,
       status: item.status,
